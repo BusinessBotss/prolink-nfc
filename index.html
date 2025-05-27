@@ -1,63 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan Pérez – ProLink NFC Card</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Pérez – UX Designer</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon-96x96.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f9fafb, #eef1f5);
+    }
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="text-gray-800">
 
-  <div class="max-w-xl mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
-    <!-- Foto -->
-    <div class="flex justify-center mb-4">
-      <img src="https://via.placeholder.com/120" alt="Foto profesional" class="rounded-full shadow-md">
+  <!-- Card Container -->
+  <div class="max-w-md mx-auto mt-16 p-8 bg-white rounded-2xl shadow-2xl fade-in">
+    
+    <!-- Foto profesional -->
+    <div class="flex justify-center">
+      <img src="https://via.placeholder.com/150" alt="Juan Pérez" class="rounded-full w-32 h-32 shadow-lg border-4 border-white -mt-24 mb-4" />
     </div>
 
-    <!-- Info personal -->
-    <div class="text-center">
-      <h1 class="text-2xl font-bold">Juan Pérez</h1>
-      <p class="text-sm text-gray-600">Diseñador UX/UI • Freelancer</p>
+    <!-- Info principal -->
+    <div class="text-center space-y-1">
+      <h1 class="text-2xl font-bold text-gray-900">Juan Pérez</h1>
+      <p class="text-gray-600 text-sm">Diseñador UX/UI · Consultor Digital</p>
     </div>
 
-    <!-- Botones -->
+    <!-- CTA Buttons -->
     <div class="mt-6 space-y-3">
-      <a href="https://www.linkedin.com/in/juanperez" target="_blank"
-         class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
-        LinkedIn
+      <a href="https://www.linkedin.com/in/juanperez" target="_blank" class="block text-center w-full py-2 rounded-lg bg-blue-700 text-white font-medium hover:bg-blue-800 transition">
+        📇 Conectar en LinkedIn
       </a>
-      <a href="mailto:juanperez@email.com"
-         class="block w-full text-center bg-gray-700 text-white py-2 rounded hover:bg-gray-800">
-        Contactar por Email
+      <a href="mailto:juanperez@email.com" class="block text-center w-full py-2 rounded-lg bg-gray-700 text-white font-medium hover:bg-gray-800 transition">
+        ✉️ Enviar un Email
       </a>
-      <a href="https://calendly.com/juanperez" target="_blank"
-         class="block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
-        Agenda una cita
+      <a href="https://calendly.com/juanperez" target="_blank" class="block text-center w-full py-2 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition">
+        📅 Reservar una reunión
       </a>
     </div>
+
+    <!-- Divider -->
+    <hr class="my-6 border-t border-gray-200" />
 
     <!-- Portafolio y CV -->
-    <div class="mt-8 space-y-2">
-      <a href="https://drive.google.com/your-cv-link" target="_blank" class="text-blue-500 underline">Descargar CV en PDF</a>
-      <p class="text-sm text-gray-500">Mira algunos de mis últimos proyectos en:</p>
-      <a href="https://behance.net/juanperez" target="_blank" class="text-blue-500 underline">Portafolio Behance</a>
+    <div class="space-y-2 text-center">
+      <a href="https://drive.google.com/your-cv-link" target="_blank" class="text-blue-600 font-medium underline hover:text-blue-800">
+        📄 Descargar CV en PDF
+      </a>
+      <p class="text-sm text-gray-500">Portafolio disponible en:</p>
+      <a href="https://behance.net/juanperez" target="_blank" class="text-blue-600 font-medium underline hover:text-blue-800">
+        🎨 Ver proyectos en Behance
+      </a>
     </div>
 
-    <!-- Formulario de contacto externo -->
+    <!-- Formulario externo -->
     <div class="mt-6">
-      <p class="text-sm text-gray-500 mb-2">¿Te interesa trabajar conmigo?</p>
-      <a href="https://forms.gle/your-form-link" target="_blank"
-         class="block w-full text-center bg-indigo-500 text-white py-2 rounded hover:bg-indigo-600">
-        Formulario de Contacto
+      <p class="text-center text-sm text-gray-500 mb-2">¿Colaboramos juntos?</p>
+      <a href="https://forms.gle/your-form-link" target="_blank" class="block text-center w-full py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
+        📝 Rellenar Formulario de Contacto
       </a>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="mt-10 text-center text-sm text-gray-400">
-    &copy; 2025 Juan Pérez. Todos los derechos reservados.
+  <footer class="mt-12 text-center text-xs text-gray-400 fade-in">
+    &copy; 2025 Juan Pérez · Diseñado con ❤️ desde Tailwind
   </footer>
-
 </body>
 </html>
+
